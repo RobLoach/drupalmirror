@@ -148,7 +148,7 @@ class DependencyTest extends ModuleTestBase {
     $edit['modules[Core][forum][enable]'] = 'forum';
     $this->drupalPostForm('admin/modules', $edit, t('Save configuration'));
     $this->assertModules(array('forum'), FALSE);
-    $this->assertText(t('You must enable the History, Taxonomy, Options, Number, Comment, Datetime, Ban, PHP Filter modules to install Forum.'));
+    $this->assertText(t('You must enable the History, Taxonomy, Options, Number, Comment, Datetime, Ban, XML-RPC modules to install Forum.'));
     $edit['modules[Core][history][enable]'] = 'history';
     $edit['modules[Core][options][enable]'] = 'options';
     $edit['modules[Core][number][enable]'] = 'number';
