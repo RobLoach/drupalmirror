@@ -28,9 +28,7 @@ function tour_library_info() {
     'title' => 'Tour',
     'version' => Drupal::VERSION,
     'js' => array(
-      // Add the JavaScript, with a group and weight such that it will run
-      // before modules/overlay/overlay-parent.js.
-      $path . '/js/tour.js' => array('group' => JS_LIBRARY, 'weight' => -1),
+      $path . '/js/tour.js' => array('group' => JS_LIBRARY),
     ),
     'dependencies' => array(
       array('system', 'jquery'),
@@ -47,7 +45,7 @@ function tour_library_info() {
     'version' => Drupal::VERSION,
     'css' => array(
       $path . '/css/tour.module.css' => array('media' => 'screen'),
-    )
+    ),
   );
 
   $libraries['jquery.joyride'] = array(

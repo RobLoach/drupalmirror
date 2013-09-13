@@ -387,8 +387,7 @@ function theme_toolbar_tray_heading_wrapper(&$variables) {
  * is an overlay supplemental region that should be refreshed whenever its
  * content is updated.
  *
- * This information is provided for any module that might need to use it, not
- * just the core Overlay module.
+ * This information is provided for any module that might need to use it.
  */
 function toolbar_system_info_alter(&$info, $file, $type) {
   if ($type == 'theme') {
