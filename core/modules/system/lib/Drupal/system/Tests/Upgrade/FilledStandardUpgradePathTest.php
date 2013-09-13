@@ -125,10 +125,6 @@ class FilledStandardUpgradePathTest extends UpgradePathTestBase {
     $this->assertEqual(unserialize($userdata[1]['contact']['enabled']->value), 1);
     $this->assertEqual($userdata[1]['contact']['enabled']->serialized, 1);
     $this->assertEqual(unserialize($userdata[2]['contact']['enabled']->value), 0);
-    $this->assertEqual(unserialize($userdata[1]['overlay']['enabled']->value), 1);
-    $this->assertEqual(unserialize($userdata[2]['overlay']['enabled']->value), 1);
-    $this->assertEqual(unserialize($userdata[1]['overlay']['message_dismissed']->value), 1);
-    $this->assertFalse(isset($userdata[2]['overlay']['message_dismissed']));
 
     // Make sure that only the garbage is remaining in the helper table.
     $this->assertEqual(db_query('SELECT COUNT(*) FROM {_d7_users_data}')->fetchField(), 2);
