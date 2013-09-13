@@ -51,8 +51,7 @@ function hook_hook_info() {
  *
  * Modules may specify whether or not the paths they define in hook_menu() are
  * to be considered administrative. Other modules may use this information to
- * display those pages differently (e.g. in a modal overlay, or in a different
- * theme).
+ * display those pages differently.
  *
  * To change the administrative status of menu items defined in another module's
  * hook_menu(), modules should implement hook_admin_paths_alter().
